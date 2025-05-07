@@ -1,6 +1,6 @@
 name = "Kabelo Xabendlini"
 
-print(f"Hello" (name.title()),"how was your day?")
+print(f"Hello"(name.title()),"how was your day?")
 
 print(f"JavaScript/n/tPython/nJava")
 
