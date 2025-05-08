@@ -15,11 +15,12 @@ while True:
     else:
         print(answer)
 
-    try:
-        print(5/0)
-    except ZeroDivisionError:
-        print("Oopsie!")
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("Oopsie!")
 
-    problem = 1
+problem = 1
+
 
     
