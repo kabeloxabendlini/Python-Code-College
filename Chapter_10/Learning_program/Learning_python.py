@@ -9,6 +9,8 @@ with open("Learning_python.txt") as file:
     contents = file.read()
     print("Printing entire file contents:\n")
     print(contents)
+    
+    contents
 
 print("\n" + "-"*50 + "\n")
 
