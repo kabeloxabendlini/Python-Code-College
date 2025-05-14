@@ -31,9 +31,9 @@ class Bullet(Sprite):
         """Draw the bullet to the screen."""
         pygame.draw.rect(self.screen, self.color, self.rect)
 
-"--snip--"
-from ship import Ship
-from bullet import Bullet
+    "--snip--"
+    from ship import Ship
+    from bullet import Bullet
 
     def __init__(self):
         "--snip--"
@@ -51,10 +51,10 @@ from bullet import Bullet
 
     def _check_keydown_events(self, event):
         "--snip--"
-        elif event.key == pygame.K_q:
+        if event.key == pygame.K_q:
             sys.exit()
         elif event.key == pygame.K_SPACE:
-             self._fire_bullet()
+            self._fire_bullet()
  
     def _check_keyup_events(self, event):
         "--snip--"
@@ -86,19 +86,28 @@ from bullet import Bullet
                 if bullet.rect.bottom <= 0:
                     self.bullets.remove(bullet)
                 print(len(self.bullets))
+                
                 self._update_screen()
                 self.clock.tick(60)
 
                 # Bullet settings
                 "--snip--"
                 self.bullet_color = (60, 60, 60)
-                self.bullets_allowed = 3
+                self.bullets_allowed = float('inf')
 
     def _fire_bullet(self):
         """Create a new bullet and add it to the bullets group."""
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
+
+    def _update_bullets(self):
+        if not self.aliens:
+        
+            # Destroy existing bullets and create new fleet.
+            self.bullets.empty()
+            self._create_fleet()
+
 
     def _update_bullets(self):
         """Update position of bullets and get rid of old bullets."""
