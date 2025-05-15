@@ -201,7 +201,7 @@ class AlienInvasion:
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
  
- "--snip--"
+"--snip--"
 from ship import Ship
 from bullet import Bullet
 
