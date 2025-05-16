@@ -97,7 +97,7 @@ from pygame.sprite import Group
 
 from ship import Ship
     
-    def __init__(self, ai_game):
+def __init__(self, ai_game):
         """Initialize scorekeeping attributes."""
         self.ai_game = ai_game
         self.screen = ai_game.screen
@@ -105,7 +105,7 @@ from ship import Ship
         self.prep_level()
         self.prep_ships()
 
-    def prep_ships(self):
+def prep_ships(self):
         """Show how many ships are left."""
         self.ships = Group()
         for ship_number in range(self.stats.ships_left):
@@ -114,7 +114,7 @@ from ship import Ship
             ship.rect.y = 10
             self.ships.add(ship)
     
-    def show_score(self):
+def show_score(self):
         """Draw scores, level, and ships to the screen."""
         self.screen.blit(self.score_image, self.score_rect)
         self.screen.blit(self.high_score_image, self.high_score_rect)

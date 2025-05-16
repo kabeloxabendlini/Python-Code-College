@@ -52,7 +52,7 @@ class Bullet(Sprite):
     def _check_keydown_events(self, event):
         "--snip--"
         if event.key == pygame.K_q:
-            sys.exit()
+            SystemExit.exit()
         elif event.key == pygame.K_SPACE:
             self._fire_bullet()
  

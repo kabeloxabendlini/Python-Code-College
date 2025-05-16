@@ -266,9 +266,9 @@ from bullet import Bullet
             self.ship.update()
             self.bullets.update()
 
-    "--snip--"
-    from bullet import Bullet
-    from alien import Alien
+"--snip--"
+from bullet import Bullet
+from alien import Alien
 
     def __init__(self):
         "--snip--"
@@ -306,7 +306,7 @@ from bullet import Bullet
             self.aliens.add(new_alien)
             current_x += 2 * alien_width
 
-        while current_x < self.settings.screen_width:
+    "while current_x < self.settings.screen_width:"
 
     def _create_fleet(self):
         "--snip--"
@@ -419,8 +419,8 @@ from bullet import Bullet
             if pygame.sprite.spritecollideany(self.ship, self.aliens):
                 print("Ship hit!!!")
 
-import sys
-from time import sleep
+    import sys
+    from time import sleep
 
 import pygame
 
@@ -540,23 +540,23 @@ from button import Button
 
     def _check_play_button(self, mouse_pos):
         """Start a new game when the player clicks Play."""
-            if self.play_button.rect.collidepoint(mouse_pos):
+        if self.play_button.rect.collidepoint(mouse_pos):
                 self.game
 
     def _check_play_button(self, mouse_pos):
         """Start a new game when the player clicks Play."""
-            if self.play_button.rect.collidepoint(mouse_pos):
+        if self.play_button.rect.collidepoint(mouse_pos):
                 # Reset the game statistics.
                 self.stats.reset_stats()
                 self.game_active = True
 
-            # Get rid of any remaining bullets and aliens.
-            self.bullets.empty()
-            self.aliens.empty()
+        # Get rid of any remaining bullets and aliens.
+        self.bullets.empty()
+        self.aliens.empty()
  
-            # Create a new fleet and center the ship.
-            self._create_fleet()
-            self.ship.center_ship()
+        # Create a new fleet and center the ship.
+        self._create_fleet()
+        self.ship.center_ship()
 
     def _check_play_button(self, mouse_pos):
         """Start a new game when the player clicks Play."""
@@ -605,7 +605,7 @@ from button import Button
 "--snip--"
 from game_stats import GameStats
 from scoreboard import Scoreboard
-"--snip--""
+"--snip--"
 
     def __init__(self):
         "--snip--"
@@ -653,7 +653,7 @@ from scoreboard import Scoreboard
             for aliens in collisions.values():
                 self.stats.score += self.settings.alien_points * len(aliens)
             self.sb.prep_score()
- "--snip--"     
+    "--snip--"     
 
     def _check_bullet_alien_collisions(self):
         "--snip--"
