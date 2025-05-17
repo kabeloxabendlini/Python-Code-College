@@ -1,5 +1,5 @@
 import requests
-import python_as px
+import plotly.express as px
 
 # Make an API call and check the response.
 url = "https://api.github.com/search/repositories"
