@@ -1,3 +1,12 @@
+import sys
+from time import sleep
+
+import pygame
+
+from settings import Settings
+from game_stats import GameStats
+from ship import Ship
+
 class Settings:
     """A class to store all settings for Alien Invasion."""
 
@@ -29,26 +38,18 @@ class Settings:
         self.ship_speed = 1.5
         self.ship_limit = 3
 
-import sys
-from time import sleep
+    "--snip--"
 
-import pygame
-
-from settings import Settings
-from game_stats import GameStats
-from ship import Ship
-"--snip--"
-
-        self __init__(self):
-        "--snip--"
-        self.screen = pygame.display.set_mode(                      
-        (self.settings.screen_width, self.settings.screen_height))
-                pygame.display.set_caption("Alien Invasion")
+    self __init__(self):
+    "--snip--"
+    self.screen = pygame.display.set_mode(                      
+    (self.settings.screen_width, self.settings.screen_height))
+    pygame.display.set_caption("Alien Invasion")
  
-        # Create an instance to store game statistics.
-        self.stats = GameStats(self)
+    # Create an instance to store game statistics.
+    self.stats = GameStats(self)
         
-        self.ship = Ship(self)
+    self.ship = Ship(self)
 
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""

@@ -2,6 +2,14 @@ import sys
 
 import pygame
 
+from settings import Settings
+from ship import Ship
+from bullet import Bullet
+from scoreboard import Scoreboard
+from game_stats import GameStats
+from button import Button
+from alien import Alien
+
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
  
@@ -201,9 +209,7 @@ class AlienInvasion:
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
  
-"--snip--"
-from ship import Ship
-from bullet import Bullet
+    "--snip--"
 
     def __init__(self):
         "--snip--"
@@ -266,9 +272,7 @@ from bullet import Bullet
             self.ship.update()
             self.bullets.update()
 
-"--snip--"
-from bullet import Bullet
-from alien import Alien
+    "--snip--"
 
     def __init__(self):
         "--snip--"
@@ -422,12 +426,8 @@ from alien import Alien
     import sys
     from time import sleep
 
-import pygame
 
-from settings import Settings
-from game_stats import GameStats
-from ship import Ship
-"--snip--"
+    "--snip--"
 
     def __init__(self):
         "--snip--"
@@ -508,9 +508,7 @@ from ship import Ship
         # Start Alien Invasion in an inactive state.
         self.game_active = False
 
-"--snip--"
-from game_stats import GameStats
-from button import Button
+    "--snip--"
 
     def __init__(self):
         "--snip--"
@@ -602,10 +600,9 @@ from button import Button
             self.settings.initialize_dynamic_settings()
             "--snip--"
     
-"--snip--"
-from game_stats import GameStats
-from scoreboard import Scoreboard
-"--snip--"
+    "--snip--"
+
+    "--snip--"
 
     def __init__(self):
         "--snip--"
