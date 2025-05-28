@@ -27,10 +27,10 @@
 
 ###################################################################################
 
-friends = ['Mr.Jombile', 'Tamiya', 'Thozie', 'Samkelo', 'Bantu']
-print(friends)
+# friends = ['Mr.Jombile', 'Tamiya', 'Thozie', 'Samkelo', 'Bantu']
+# print(friends)
 
-could_not_make_it = (friends[4])
-friends.remove(friends[4])
-print(friends)
-print(f"\nA {friends[4].title()} was busy so he could not make it.")
+# could_not_make_it = (friends[4])
+# friends.remove(friends[4])
+# print(friends)
+# print(f"\nA {friends[4].title()} was busy so he could not make it.")
